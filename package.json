@@ -1,0 +1,30 @@
+{
+  "name": "ensayo",
+  "version": "1.0.0",
+  "description": "Aprendiendo github actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flurion014/ensayo.git"
+  },
+  "keywords": [
+    "trying"
+  ],
+  "author": "flurion014",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flurion014/ensayo/issues"
+  },
+  "homepage": "https://github.com/flurion014/ensayo#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "eslint": "^9.23.0",
+    "globals": "^16.0.0"
+  },
+  "dependencies": {
+    "uglify-js": "^3.19.3"
+  }
+}
