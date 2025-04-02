@@ -33,6 +33,11 @@ jobs:
       - name: Install npm
         run: npm install
 
+      - name: Checkout the elk submodule
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
       # Runs a set of commands using the runners shell
       - name: Run the tests
         working-directory: ./jsTests
