@@ -22,9 +22,10 @@
   "devDependencies": {
     "@eslint/js": "^9.23.0",
     "eslint": "^9.23.0",
-    "globals": "^16.0.0"
+    "globals": "^16.0.0",
+    "uglify-js": "^3.19.3"
   },
   "dependencies": {
-    "uglify-js": "^3.19.3"
+    
   }
 }
