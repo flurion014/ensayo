@@ -14,21 +14,21 @@ for(let i=0;i<borde;i+=2){
     objeto.palabra += "l";
     if(typeof objeto.palabra === "string"){
       objeto.numero = objeto.funcion(1);
-    } else{
+    } else {
       objeto.numero = 5;
     }
   } else if(i>=2 && i<4){
     objeto.palabra += "a";
     if(!objeto.booleano){
       objeto.numero = 5;
-    } else{
+    } else {
       objeto.numero = objeto.funcion(1);
     }
   } else if(i > 3 && i <6){
     objeto.palabra = objeto.palabra + "b";
     if(typeof objeto.booleano === "boolean"){
       objeto.numero = objeto.funcion(-1);
-    } else{
+    } else {
       objeto.numero = 5;
     }
   } else {
