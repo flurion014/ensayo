@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: '20.x'
       - name: Install npm
-        run: npm install
+        run: npm ci
 
       - name: Checkout the elk submodule
         uses: actions/checkout@v2
