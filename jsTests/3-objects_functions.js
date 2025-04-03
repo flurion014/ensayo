@@ -1,15 +1,14 @@
 let check = false;
 
-//demostracion de creacion de un objeto
-//posee un string, un numero y una funcion
-let paquete = {
-  producto: "",
-  peso: 0,
-  precio: function(x,y){let z = x * 2; return z-y;}
+//proof of object creation containing different types of properties
+let pack = {
+  something: "",
+  number: 0,
+  func: function(x,y){let z = x * 2; return z-y;}
 };
 
-//demostracion cambio de las caracteristicas del objeto
-paquete.producto = "Sofa";
-paquete.peso += 10;
+//proof that properties can be changed
+pack.something = "Something";
+pack.number += 10;
 
-check = paquete.producto === "Sofa" && paquete.peso === 10 && paquete.precio(2,4)===0;
+check = pack.something === "Something" && pack.number === 10 && pack.func(2,4)===0;

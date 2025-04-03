@@ -3,23 +3,23 @@ let check = false;
 let i = 0;
 let j = 1;
 let k = 2;
-let alfa = 6;
+let number = 6;
 
-//demostracion de multiples if-else con distintos tipos de comparativa
-//uglify NO debe convertirlo en condicionales ternarios (NO optimizacion condicional)
+//proof of multiple if-else with different types of comparisons
+//uglify MUST NOT transform them in ternary conditionals (NO optimization)
 if(i > 0){
-  alfa = 1;
+  number = 1;
 } else if(j >= 2){
-  alfa = 2;
+  number = 2;
 } else if(k === 2){
-  alfa = 3;
+  number = 3;
   if(i+j+k !== 3){
-    alfa = 4;
+    number = 4;
   } else{
-    alfa = 0;  
+    number = 0;  
   }
 } else {
-    alfa = 5;
+    number = 5;
 }
 
-check = alfa === 0;
+check = number === 0;

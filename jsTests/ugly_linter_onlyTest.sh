@@ -1,14 +1,14 @@
 #!/bin/bash
-#SOLO USAR PARA EL AUTOTEST
-#para trabar con elk hay otra version mas completa que considera
-#otras posibles mejoras de codigo, pero que para los tests no tienen sentido
-#$1 es el nombre del archivo
-#$2 es la salida
-#$3 es para la opcion de usar toplevel
+#minimize js file
 
-#prepara archivo js para ejecucion
-#primero pasamos uglify
-uglifyjs $1 -c sequences=false,comparisons=false,conditionals=false,typeofs=false --mangle $3 -o $2
+#USE THIS ONLY FOR INITIAL TEST
+#when working with elk the more complete version should be used
+#it can detect some code improvements to fix (but for this tests it does not make sense)
+#$1 input file name
+#$2 output file name
 
-#luego pasamos el linter
-npx eslint --fix --rule "semi":[2,"always"],"no-unused-vars":["off"] salida.js $2
+#first uglify to minimize
+uglifyjs $1 -c sequences=false,comparisons=false,conditionals=false,typeofs=false --mangle toplevel -o $2
+
+#then ESLint to add missing semicolons
+npx eslint --fix --rule "semi":[2,"always"],"no-unused-vars":["off"] $2

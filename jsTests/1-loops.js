@@ -4,15 +4,16 @@ let i = 0;
 let test;
 let j;
 test = 0;
-//incluso si en el 99% de veces se convierte en un for
-//no es recomendable usar while
-//demostracion de que while se vuelve for (optimizacion de bucle)
+
+//WARNING: even if %99 of times while becomes for
+//it is NOT RECOMMENDED using while as it may lead to errors
+//proof of while loop becoming a for loop (loop optimization)
 while (i < 5) {
   i++;
   test = test + 1;
 }
 
-//demostracion de que for permanece igual
+//proof of for loop staying the same
 for(j=10;j>=6;j--){
   test+=1;
 }

@@ -1,16 +1,16 @@
 #!/bin/bash
-#$1 es el nombre del archivo
-#$2 es la salida
-#$3 es para la opcion de usar toplevel
+#$1 input file name
+#$2 output file name
+#$3 pass "toplevel" to also mangle toplevel variables
 
-#correccion, por si se quiere revisar mas cosas que uglify no va a corregir
-#else if duplicados o inalcanzables y que haya == en vez de ===
-#COMENTAR SI NO SE QUIERE USAR
+#improvements not automatically fixable by uglify or ESLint
+# some extra help for manual adjustments
+#duplicated or unreachable else if branches or having == instead of ===
+#COMMENT IF YOU DO NOT WANT TO USE IT
 npx eslint --fix --rule "no-dupe-else-if":[2],"eqeqeq":[2,"always"] salida.js $2
 
-#prepara archivo js para ejecucion
-#primero pasamos uglify
+#first uglify to minimize
 uglifyjs $1 -c sequences=false,comparisons=false,conditionals=false,typeofs=false --mangle $3 -o $2
 
-#luego pasamos el linter
+#then ESLint to add missing semicolons
 npx eslint --fix --rule "semi":[2,"always"] salida.js $2
